@@ -5,12 +5,7 @@ html, body {
     padding: 0;
 }
 
-.card-img {
-    /* height: 50%;
-    width: 50%; */
-    object-fit: cover;
-    height: 150px;
-}
+
 
 .card {
     width: 90%;
@@ -20,6 +15,23 @@ html, body {
     color: #fff;
     display: flex;
     flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .card {
+        flex-direction: row;
+    }
+    
+    .card-img {
+        height: 300px;
+    }
+}
+
+.card-img {
+    object-fit: cover;
+    flex-basis: 200px;
+    min-width: 0;
+    min-height: 0;
 }
 
 .card-content {
@@ -66,6 +78,7 @@ html, body {
     margin: 0;
     font-size: 16px;
     opacity: .6;
+    line-height: 1;
 }
 
 .card-read-time span {
